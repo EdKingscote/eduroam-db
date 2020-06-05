@@ -242,7 +242,7 @@ def check_coord_format(lon, lat, options):
   elif re.match(r"^\d{1,3}°\d{1,2}'\d{1,2}(\.\d{1,8})?\"E$", str(lat)) and re.match(r"^\d{1,3}°\d{1,2}'\d{1,2}(\.\d{1,8})?\"N$", str(lon)):
     c_format = 2  # regular swapped
 
-  elif re.match(r"\d{1,3}\.\d+", str(lon)) and re.match(r"\d{1,3}\.\d+", str(lat)):
+  elif re.match(r"-?\d{1,3}\.\d+", str(lon)) and re.match(r"-?\d{1,3}\.\d+", str(lat)):
     c_format = 1  # float
 
   else:
